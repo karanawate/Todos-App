@@ -4,7 +4,7 @@
    Edit Data
 @endsection
 @section('content')
-<form action="todos/{{ $todoEdit->id }}/update-todos" method="POST">
+<form action="{{ url('todos/'.$todoEdit->id.'/update-todos') }}" method="POST">
    {{ csrf_field() }}
     <div class="text-center my-5">Edit Page</div>
      <div class="row justify-content-center">

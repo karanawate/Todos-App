@@ -50,7 +50,7 @@ class TodosController extends Controller
         $todoEdit = Todo::findOrFail($todo);
         return view('todos.edit',['todoEdit'=>$todoEdit]);
     }
-    public function updatetodo()
+    public function updatetodo(Request $request)
     {
         //echo "Hi";
           dd($request->all());
