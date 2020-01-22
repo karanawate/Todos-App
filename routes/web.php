@@ -18,11 +18,10 @@ Route::get('todos','TodosController@index')->name('todoss');
 Route::get('todos-show/{todo}', 'TodosController@show');
 Route::get('new-todos','TodosController@create');
 Route::post('store-todos','TodosController@store');
-//Route::get('todos-del/{todo}','TodosController@destroy');
 Route::get('Edit/{id}','TodosController@edittodo');
 Route::post('todos/{todo}/update-todos','TodosController@updatetodo');
-
 Route::get('del/{id}','TodosController@destroy');
+Route::get('edit/{id}','TodosController@edittodo');
 // Route::get('del/{id}',function($id){
 //     echo "user".$id;
 // });

@@ -57,6 +57,7 @@ class TodosController extends Controller
           //dd($request->all());
            $todoupdate = Todo::findOrFail($todoId);
             $todoupdate->update(Input::all());
+            //redirect to view page
             return redirect()->back();
     }
 }

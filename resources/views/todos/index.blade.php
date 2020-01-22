@@ -17,7 +17,7 @@
                            {{$todo->fname}}
                            <a href="todos-show/{{ $todo->id }}"><button  style="margin:5px" class="btn btn-primary float-right">view</button></a>
                            <!-- <a href="del/{{ $todo->id }}"><button style="margin:5px;" class="btn btn-danger float-right">Delete</button></a> -->
-                           <a href="Edit/{{ $todo->id }}"><button style="margin:5px;" class="btn btn-danger float-right">Edit</button></a>
+                           <!-- <a href="Edit/{{ $todo->id }}"><button style="margin:5px;" class="btn btn-danger float-right">Edit</button></a> -->
 
                         </li>
                         @endforeach
