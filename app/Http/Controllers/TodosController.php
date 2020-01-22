@@ -44,7 +44,7 @@ class TodosController extends Controller
     $todoData = Todo::findOrFail($todo);
    // dd($todoData);
      $todoData->delete();
-     return redirect()->back();
+     return redirect('todos');
     }
     public function edittodo($todo)
     {

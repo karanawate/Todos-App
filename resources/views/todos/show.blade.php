@@ -18,8 +18,7 @@ Single todo:{{$todo->name}}
                   </div>
                </div>
                     <a class="btn btn-info my-2">Edit</a>
-
-                    <a href="show/del{{ $todo->id }}"><button class="btn btn-danger my-2">Delete</button></a>
-            </div>
+                       <a href="{{ url('/del/'.$todo->id) }} "><button class="btn btn-danger my-2">Delete</button></a>
+            </div>1
          </div>
 @endsection
