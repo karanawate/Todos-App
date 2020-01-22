@@ -26,7 +26,8 @@
 
         <div class="col-md-8">
         @if(Session::has('message'))
-         <p class="alert alert-success"><strong>Success!</strong>{{ Session::get('message') }}</p>
+
+         <p class="alert alert-success"><span> <img src="{{URL::asset('/images/sym.png')}}" alt="profile Pic" height="25" width="25"></span><strong>Success!</strong>{{ Session::get('message') }}</p>
          @endif
             <div class="card default-card">
                 <div class="card-header">
@@ -48,5 +49,4 @@
         </div>
      </div>
     </form>
-
 @endsection
