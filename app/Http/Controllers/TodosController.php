@@ -4,6 +4,7 @@ use App\Todo;
 use Illuminate\Http\Request;
 use DB;
 use Session;
+use Illuminate\Support\Facades\Input;
 class TodosController extends Controller
 {
     public function index()
@@ -50,20 +51,12 @@ class TodosController extends Controller
         $todoEdit = Todo::findOrFail($todo);
         return view('todos.edit',['todoEdit'=>$todoEdit]);
     }
-    public function updatetodo(Request $request)
+    public function updatetodo(Request $request, $todoId)
     {
         //echo "Hi";
-          dd($request->all());
-
-
-          // $todoupdate = Todo::findOrFail($id);
-
-          // $todoupdate->fname =$todoupdate->fname;
-          // $todoupdate->description =$todoupdate->description;
-          // $todoupdate->save();
-          // return redirect()->back();
-
-
-
+          //dd($request->all());
+           $todoupdate = Todo::findOrFail($todoId);
+            $todoupdate->update(Input::all());
+            return redirect()->back();
     }
 }
