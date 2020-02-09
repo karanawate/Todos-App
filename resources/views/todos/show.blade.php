@@ -14,7 +14,8 @@ Single todo:{{$todo->name}}
                      Details
                   </div>
                   <div class="card-body">
-                     {{ $todo->description }}
+                    <div>{{ $todo->description }}</div>
+                    <div class="pull-left">{{$todo->created_at->diffForHumans()}}</div>
                   </div>
                </div>
                     <a href="{{ url('/edit/'.$todo->id) }}" ><button class="btn btn-danger my-5">Edit</button></a>

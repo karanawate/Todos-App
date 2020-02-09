@@ -10,4 +10,6 @@ class Todo extends Model
         'fname',
          'description'
      ];
+     protected $dates = ['created_at', 'updated_at'];
+
 }
